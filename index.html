@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101827">
+<meta name="description" content="The personal website of Abhinandan Chatterjee: ideas, projects, writing, and intellectual interests.">
+<title>Abhinandan Chatterjee | Personal Website</title>
+<style>
+:root{--navy:#101827;--navy2:#172337;--gold:#d6b36a;--gold2:#f0d79d;--saffron:#d66a36;--maroon:#651f32;--ivory:#f7f2e8;--paper:#fffdf8;--ink:#1d2633;--muted:#667080;--line:rgba(214,179,106,.28);--serif:Georgia,"Times New Roman",serif;--sans:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ivory);color:var(--ink);font-family:var(--sans);line-height:1.65}a{color:inherit;text-decoration:none}.topline{height:4px;background:linear-gradient(90deg,var(--saffron),var(--gold),var(--maroon))}.nav{position:sticky;top:0;z-index:10;background:rgba(16,24,39,.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.nav-inner{max-width:1180px;margin:auto;padding:0 24px;min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:12px;color:var(--ivory);font-family:var(--serif);font-size:17px;letter-spacing:.03em}.seal{width:38px;height:38px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold2);font-size:18px}.navlinks{display:flex;gap:23px;align-items:center;font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:#e9e2d3}.navlinks a:hover{color:var(--gold2)}.menu{display:none;background:none;color:var(--ivory);border:1px solid var(--line);padding:8px 11px;border-radius:4px}
+.hero{background:radial-gradient(ellipse at 78% 25%,rgba(214,179,106,.12),transparent 36%),linear-gradient(135deg,var(--navy),#111c2d 65%,#20202c);color:var(--ivory);position:relative;overflow:hidden}.hero:after{content:"";position:absolute;width:440px;height:440px;border:1px solid rgba(214,179,106,.12);border-radius:50%;right:-120px;top:70px;box-shadow:0 0 0 35px rgba(214,179,106,.025),0 0 0 75px rgba(214,179,106,.02)}.hero-inner{max-width:1180px;margin:auto;padding:110px 24px 105px;position:relative;z-index:1}.eyebrow{font-size:11px;letter-spacing:.23em;text-transform:uppercase;color:var(--gold2);display:flex;align-items:center;gap:12px}.eyebrow:before{content:"";width:34px;height:1px;background:var(--gold)}h1{font-family:var(--serif);font-size:clamp(48px,8vw,96px);line-height:.99;letter-spacing:-.045em;font-weight:400;max-width:900px;margin:26px 0}.hero h1 span{color:var(--gold2);font-style:italic}.hero-copy{font-size:17px;max-width:620px;color:#d5d8df;line-height:1.8}.hero-quote{border-left:2px solid var(--saffron);padding-left:16px;margin:30px 0;color:#f0e5ce;font-family:var(--serif);font-size:20px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 19px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--gold);transition:.2s}.btn.primary{background:var(--gold);color:var(--navy)}.btn:hover{transform:translateY(-2px);background:var(--gold2);color:var(--navy)}.btn.secondary{color:var(--ivory);border-color:rgba(255,255,255,.28)}.hero-meta{margin-top:60px;padding-top:20px;border-top:1px solid rgba(255,255,255,.13);display:flex;gap:38px;flex-wrap:wrap;color:#aeb6c2;font-size:11px;letter-spacing:.12em;text-transform:uppercase}.hero-meta strong{display:block;color:var(--gold2);font-weight:500;margin-bottom:3px}
+main{max-width:1180px;margin:auto;padding:0 24px}.section{padding:88px 0;border-bottom:1px solid #ded6c7}.section-head{display:grid;grid-template-columns:180px 1fr;gap:30px;margin-bottom:38px}.section-label{font-size:11px;text-transform:uppercase;letter-spacing:.18em;color:var(--maroon);padding-top:9px}.section h2{font-family:var(--serif);font-size:clamp(34px,5vw,54px);line-height:1.1;font-weight:400;margin:0 0 18px;color:var(--navy);letter-spacing:-.025em}.section-intro{max-width:710px;color:#5c6470;margin:0}.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:55px;align-items:start}.about-text p{font-size:16px;color:#4c5562}.note-card{background:var(--navy);color:var(--ivory);padding:30px;position:relative}.note-card:before{content:"";position:absolute;top:0;left:30px;width:52px;height:3px;background:var(--saffron)}.note-card h3{font-family:var(--serif);font-weight:400;font-size:25px;margin:8px 0 14px;color:var(--gold2)}.note-card p{color:#d0d5dc;font-size:14px}.note-card .small{font-size:10px;text-transform:uppercase;letter-spacing:.16em;color:#a9b1bf}
+.values{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#ded6c7;border:1px solid #ded6c7;margin-top:34px}.value{background:var(--paper);padding:24px}.value .num{font-family:var(--serif);color:var(--saffron);font-size:24px}.value h3{font-family:var(--serif);font-weight:400;font-size:21px;margin:7px 0}.value p{font-size:13px;color:var(--muted);margin:0}
+.project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.project{background:var(--paper);border:1px solid #e3dbcd;padding:28px;min-height:225px;display:flex;flex-direction:column;transition:.2s}.project:hover{border-color:var(--gold);transform:translateY(-3px)}.project .tag{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--maroon)}.project h3{font-family:var(--serif);font-size:27px;font-weight:400;color:var(--navy);margin:18px 0 8px}.project p{font-size:14px;color:var(--muted);margin:0 0 20px}.project .more{margin-top:auto;font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:#8a5a23}
+.writing-list{border-top:1px solid #d8cfbf}.writing-item{display:grid;grid-template-columns:150px 1fr 24px;gap:20px;padding:22px 0;border-bottom:1px solid #d8cfbf;align-items:center}.writing-item .type{font-size:10px;text-transform:uppercase;letter-spacing:.15em;color:var(--maroon)}.writing-item h3{font-family:var(--serif);font-weight:400;font-size:21px;margin:0 0 4px;color:var(--navy)}.writing-item p{font-size:13px;color:var(--muted);margin:0}.arrow{color:var(--saffron);font-size:22px}
+.contact{background:var(--maroon);color:var(--ivory);padding:55px;display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center}.contact h2{color:var(--ivory);font-family:var(--serif);font-weight:400;font-size:clamp(32px,4vw,48px);margin:0 0 10px}.contact p{color:#e4d5d6;max-width:600px;margin:0}.contact .btn{color:var(--ivory);border-color:#e4c6a4}.contact .btn:hover{color:var(--navy)}
+footer{background:var(--navy);color:#c4cbd4;padding:30px 24px}.footer-inner{max-width:1180px;margin:auto;display:flex;justify-content:space-between;gap:20px;align-items:center;font-size:11px;letter-spacing:.06em}.footer-inner span{color:var(--gold2)}.fineprint{font-size:10px;color:#8994a3;margin-top:7px}
+@media(max-width:760px){.nav-inner{min-height:66px}.menu{display:block}.navlinks{display:none;position:absolute;top:66px;left:0;right:0;background:var(--navy);padding:20px 24px 25px;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}.navlinks.open{display:flex}.hero-inner{padding:82px 24px 70px}.hero-meta{gap:20px;margin-top:42px}.section{padding:65px 0}.section-head{grid-template-columns:1fr;gap:10px}.about-grid{grid-template-columns:1fr;gap:25px}.values{grid-template-columns:1fr}.project-grid{grid-template-columns:1fr}.writing-item{grid-template-columns:1fr 20px;gap:5px}.writing-item .type{grid-column:1/-1}.contact{padding:30px;grid-template-columns:1fr}.footer-inner{flex-direction:column;align-items:flex-start}.hero:after{right:-270px}}
+</style>
+</head>
+<body>
+<div class="topline"></div>
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#home" aria-label="Abhinandan Chatterjee home"><span class="seal">अ</span><span>ABHINANDAN CHATTERJEE</span></a>
+    <button class="menu" aria-label="Toggle navigation" onclick="document.querySelector('.navlinks').classList.toggle('open')">MENU ☰</button>
+    <nav class="navlinks">
+      <a href="#about">About</a><a href="#principles">Principles</a><a href="#projects">Projects</a><a href="#writing">Writing</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div class="eyebrow">Personal website · Ideas &amp; initiatives</div>
+    <h1>Ideas with roots.<br><span>Eyes on the future.</span></h1>
+    <p class="hero-copy">I’m Abhinandan Chatterjee, a student and independent thinker interested in Indian civilisation, political ideas, history, and the ways enduring traditions can speak to a changing world.</p>
+    <div class="hero-quote">“A living tradition is one that continues to think.”</div>
+    <div class="actions"><a class="btn primary" href="#projects">Explore my work ↗</a><a class="btn secondary" href="#about">A little about me</a></div>
+    <div class="hero-meta"><div><strong>Based in</strong>Kolkata, India</div><div><strong>Interests</strong>Ideas · History · Public life</div><div><strong>Current chapter</strong>Learning, building, refining</div></div>
+  </div>
+</section>
+<main>
+<section class="section" id="about">
+  <div class="section-head"><div class="section-label">01 / About</div><div><h2>A personal journey,<br>still being written.</h2><p class="section-intro">This is a space for the person behind the projects: what I study, what I explore, and the questions that keep me thinking.</p></div></div>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>I’m currently a student with a strong interest in political science, history, Indian cultural traditions, and public affairs. I enjoy exploring how institutions, ideas, and civilisations evolve, and how the past can inform thoughtful approaches to the present.</p>
+      <p>This website brings together my interests and independent projects in one place. It is a work in progress, much like the person it represents: ideas may develop, positions may be refined, and new work will find its way here over time.</p>
+      <p>Beyond politics, I’m interested in religious and philosophical literature, historical interpretation, and creative alternate-history worlds.</p>
+    </div>
+    <aside class="note-card"><div class="small">A note on this site</div><h3>Curiosity before certainty.</h3><p>These pages are a personal portfolio, not an official statement on behalf of any organisation. Views and projects should be read in their own context, and the site will evolve as the work does.</p><p class="small">Updated as the journey continues</p></aside>
+  </div>
+</section>
+<section class="section" id="principles">
+  <div class="section-head"><div class="section-label">02 / Outlook</div><div><h2>What draws my attention.</h2><p class="section-intro">A few recurring threads that connect my studies, projects, and writing.</p></div></div>
+  <div class="values">
+    <article class="value"><div class="num">I.</div><h3>Civilisation &amp; culture</h3><p>Indian intellectual heritage, Sanskrit, traditions, and the stories through which communities understand themselves.</p></article>
+    <article class="value"><div class="num">II.</div><h3>Politics &amp; institutions</h3><p>Political thought, governance, public organisation, and the practical work of turning ideas into durable institutions.</p></article>
+    <article class="value"><div class="num">III.</div><h3>History &amp; possibility</h3><p>Historical research, competing interpretations, and alternate histories that test how events might have unfolded.</p></article>
+  </div>
+</section>
+<section class="section" id="projects">
+  <div class="section-head"><div class="section-label">03 / Projects</div><div><h2>Ideas in motion.</h2><p class="section-intro">A home for initiatives and independent work. Each project can grow into its own page as more material becomes available.</p></div></div>
+  <div class="project-grid">
+    <a class="project" href="#contact"><div class="tag">Public initiative</div><h3>Jayatu Sanskritam Movement</h3><p>An initiative centred on culture, nation, and development, with an interest in Indian heritage and public life.</p><div class="more">Project information ↗</div></a>
+    <a class="project" href="#writing"><div class="tag">Independent thought</div><h3>Political Philosophy</h3><p>Notes and evolving ideas on political traditions, governance, institutions, and the relationship between values and public policy.</p><div class="more">Explore writing ↗</div></a>
+    <a class="project" href="#writing"><div class="tag">Research &amp; study</div><h3>History &amp; Civilisation</h3><p>Historical questions, cultural traditions, source-based explorations, and reading notes across periods and subjects.</p><div class="more">Explore writing ↗</div></a>
+    <a class="project" href="#writing"><div class="tag">Creative work</div><h3>Alternate Histories</h3><p>Speculative timelines and imagined political worlds, built to explore how different choices can reshape history.</p><div class="more">Explore writing ↗</div></a>
+  </div>
+</section>
+<section class="section" id="writing">
+  <div class="section-head"><div class="section-label">04 / Journal</div><div><h2>Notes from the desk.</h2><p class="section-intro">A future home for essays, research notes, reflections, and project updates. Replace these placeholders with published work when ready.</p></div></div>
+  <div class="writing-list">
+    <article class="writing-item"><div class="type">Essay · forthcoming</div><div><h3>Tradition in a changing world</h3><p>How inherited ideas can remain open to interpretation and renewal.</p></div><div class="arrow">↗</div></article>
+    <article class="writing-item"><div class="type">Research · forthcoming</div><div><h3>Reading history through sources</h3><p>Notes on evidence, interpretation, and the questions historians ask.</p></div><div class="arrow">↗</div></article>
+    <article class="writing-item"><div class="type">Project note · forthcoming</div><div><h3>Building an initiative from the ground up</h3><p>Reflections on organisation, communication, and long-term work.</p></div><div class="arrow">↗</div></article>
+  </div>
+</section>
+<section class="section" id="contact" style="border-bottom:0">
+  <div class="contact"><div><div class="eyebrow">05 / Get in touch</div><h2>Good ideas begin<br>with a conversation.</h2><p>For thoughtful correspondence, collaboration, or questions about my projects, use a public contact channel you are comfortable sharing.</p></div><a class="btn" href="mailto:hello@example.com" onclick="if(this.href.endsWith('hello@example.com')){alert('Replace hello@example.com in index.html with your public email address first.');return false;}">Contact me ↗</a></div>
+  <p class="fineprint">Before publishing: replace the sample email address, add any public social links you want to share, and review every biographical detail.</p>
+</section>
+</main>
+<footer><div class="footer-inner"><div>© <span id="year"></span> Abhinandan Chatterjee</div><div>Personal website · Built around ideas, not noise.</div></div></footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();document.querySelectorAll('.navlinks a').forEach(a=>a.addEventListener('click',()=>document.querySelector('.navlinks').classList.remove('open')));</script>
+</body>
+</html>
